@@ -44,6 +44,7 @@ static void updateDiscordPresence()
         discordPresence.endTimestamp = time(0) + 5 * 60;
         discordPresence.largeImageKey = "canary-large";
         discordPresence.smallImageKey = "ptb-small";
+#if 0
         discordPresence.partyId = "party1234";
         discordPresence.partySize = 1;
         discordPresence.partyMax = 6;
@@ -51,6 +52,13 @@ static void updateDiscordPresence()
         discordPresence.matchSecret = "xyzzy";
         discordPresence.joinSecret = "join";
         discordPresence.spectateSecret = "look";
+#endif
+        discordPresence.button_label[0] = "btn0";
+        discordPresence.button_url[0] = "https://github.com/motz61/discord-rpc";
+
+        discordPresence.button_label[1] = "btn1";
+        discordPresence.button_url[1] = "https://github.com/motz61/discord-rpc";
+
         discordPresence.instance = 0;
         Discord_UpdatePresence(&discordPresence);
     }
